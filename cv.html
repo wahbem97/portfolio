@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mustafa Wehbi — Curriculum Vitae</title>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 14mm 16mm 12mm 16mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #222222;
+      background: #ffffff;
+      font-size: 8.8pt;
+      line-height: 1.38;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .cv-container {
+      width: 100%;
+      max-width: 210mm;
+      margin: 0 auto;
+    }
+
+    /* Header Section */
+    .cv-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 11px;
+      padding-bottom: 2px;
+    }
+
+    .header-main {
+      flex: 1;
+      padding-right: 18px;
+    }
+
+    .candidate-name {
+      font-size: 22pt;
+      font-weight: 800;
+      color: #111111;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 2px;
+    }
+
+    .candidate-title {
+      font-size: 11pt;
+      font-weight: 600;
+      color: #0066cc;
+      margin-bottom: 5px;
+    }
+
+    .contact-details {
+      font-size: 8.2pt;
+      color: #444444;
+      line-height: 1.4;
+    }
+
+    .contact-details a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    .contact-details a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-sep {
+      color: #888888;
+      margin: 0 4px;
+    }
+
+    .portfolio-link-row {
+      margin-top: 1.5px;
+      font-size: 8.4pt;
+    }
+
+    .portfolio-link-row strong {
+      color: #111111;
+    }
+
+    .qr-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      flex-shrink: 0;
+      width: 76px;
+    }
+
+    .qr-image {
+      width: 68px;
+      height: 68px;
+      display: block;
+      border: 1px solid #e0e0e0;
+      border-radius: 3px;
+      padding: 2px;
+    }
+
+    .qr-caption {
+      font-size: 6.8pt;
+      color: #555555;
+      margin-top: 3px;
+      letter-spacing: 0.01em;
+    }
+
+    /* Section Styling */
+    .cv-section {
+      margin-bottom: 9.5px;
+    }
+
+    .section-title {
+      font-size: 8.8pt;
+      font-weight: 700;
+      color: #0066cc;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 1.2px solid #0066cc;
+      padding-bottom: 1.5px;
+      margin-bottom: 5px;
+    }
+
+    .section-text {
+      color: #2a2a2a;
+      text-align: justify;
+      line-height: 1.38;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 22px;
+      row-gap: 2px;
+    }
+
+    .skills-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .skills-list li {
+      position: relative;
+      padding-left: 12px;
+      font-size: 8.5pt;
+      line-height: 1.38;
+      color: #222222;
+    }
+
+    .skills-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #111111;
+      font-weight: bold;
+    }
+
+    /* Experience Items */
+    .experience-item {
+      margin-bottom: 6px;
+    }
+
+    .experience-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .item-title {
+      font-size: 8.9pt;
+      font-weight: 700;
+      color: #111111;
+    }
+
+    .item-date {
+      font-size: 8.2pt;
+      color: #555555;
+      font-weight: 500;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .item-company {
+      font-size: 8.3pt;
+      font-style: italic;
+      color: #444444;
+      margin-bottom: 2px;
+    }
+
+    .item-bullets {
+      list-style-type: none;
+      padding-left: 0;
+      margin-top: 1.5px;
+    }
+
+    .item-bullets li {
+      position: relative;
+      padding-left: 12px;
+      font-size: 8.5pt;
+      line-height: 1.35;
+      margin-bottom: 1.5px;
+      color: #2a2a2a;
+    }
+
+    .item-bullets li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #111111;
+    }
+
+    /* Education Item */
+    .education-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 3px;
+    }
+
+    .education-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .education-degree {
+      font-size: 8.9pt;
+      font-weight: 700;
+      color: #111111;
+    }
+
+    .education-school {
+      font-size: 8.3pt;
+      font-style: italic;
+      color: #444444;
+    }
+
+    /* One-liners */
+    .inline-data {
+      font-size: 8.6pt;
+      color: #222222;
+      line-height: 1.38;
+    }
+
+    .ref-item {
+      font-size: 8.3pt;
+      line-height: 1.38;
+      color: #333333;
+      margin-bottom: 1.5px;
+    }
+
+    .ref-item strong {
+      color: #111111;
+    }
+  </style>
+</head>
+<body>
+  <div class="cv-container">
+    <!-- Header -->
+    <header class="cv-header">
+      <div class="header-main">
+        <h1 class="candidate-name">Mustafa Wehbi</h1>
+        <div class="candidate-title">Communications Officer</div>
+        <div class="contact-details">
+          <span>+32 465 36 24 25</span>
+          <span class="contact-sep">|</span>
+          <a href="mailto:wahbem97@gmail.com">wahbem97@gmail.com</a>
+          <span class="contact-sep">|</span>
+          <span>Limbastraat 66, 9000 Gent, Belgium</span>
+        </div>
+        <div class="portfolio-link-row contact-details">
+          <span>Portfolio:</span> <a href="https://wahbem97.github.io/portfolio/" target="_blank">wahbem97.github.io/portfolio</a>
+        </div>
+      </div>
+      <div class="qr-column">
+        <a href="https://wahbem97.github.io/portfolio/" target="_blank" title="Scan or click to view online portfolio">
+          <img src="assets/portfolio_qr.svg" alt="Portfolio QR Code" class="qr-image">
+        </a>
+        <span class="qr-caption">Scan for portfolio</span>
+      </div>
+    </header>
+
+    <!-- Profile -->
+    <section class="cv-section">
+      <h2 class="section-title">Profile</h2>
+      <p class="section-text">
+        Communications and marketing professional with a Bachelor in Mass Communication and several years of experience creating and publishing social media content in international environments (China, the UAE, Malaysia and Qatar). Grew a company's social media community from 2,000 to 20,000 followers through a structured content strategy and a consistent publishing rhythm. Strong storyteller who combines writing, video and data visuals to make complex topics engaging, and uses AI to streamline content workflows. Motivated to bring this to an international innovation network.
+      </p>
+    </section>
+
+    <!-- Key Skills -->
+    <section class="cv-section">
+      <h2 class="section-title">Key Skills</h2>
+      <div class="skills-grid">
+        <ul class="skills-list">
+          <li>Social media strategy &amp; campaigns</li>
+          <li>Content planning &amp; editorial calendars</li>
+          <li>Community management &amp; engagement</li>
+          <li>Performance tracking &amp; analytics</li>
+          <li>Project coordination &amp; deadlines</li>
+        </ul>
+        <ul class="skills-list">
+          <li>Storytelling &amp; copywriting</li>
+          <li>Video production &amp; editing</li>
+          <li>Data visuals: charts, map animations</li>
+          <li>Brand identity &amp; consistency</li>
+          <li>Stakeholder &amp; supplier communication</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Professional Experience -->
+    <section class="cv-section">
+      <h2 class="section-title">Professional Experience</h2>
+
+      <div class="experience-item">
+        <div class="item-header">
+          <span class="item-title">Online Marketing Officer</span>
+          <span class="item-date">2020 – 2025</span>
+        </div>
+        <div class="item-company">Leader Group, Guangzhou, China (remote)</div>
+        <ul class="item-bullets">
+          <li>Developed and executed the social media strategy, growing the follower base from 2,000 to 20,000.</li>
+          <li>Planned, wrote and published campaign content and edited videos for online channels.</li>
+          <li>Kept a consistent publishing schedule aligned with campaign objectives and audience needs.</li>
+          <li>Presented the company and its vision to clients and partners.</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <div class="item-header">
+          <span class="item-title">Marketing Officer – Brand Manager</span>
+          <span class="item-date">2022 – 2023</span>
+        </div>
+        <div class="item-company">Nejoum Aljazeera Auto Shipping Co., United Arab Emirates</div>
+        <ul class="item-bullets">
+          <li>Defined the strategy for online marketing campaigns and ran them across social media.</li>
+          <li>Produced and published videos with After Effects and Premiere Pro.</li>
+          <li>Developed brand identity and logos in Illustrator and safeguarded brand consistency across all channels.</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <div class="item-header">
+          <span class="item-title">Graphic Designer</span>
+          <span class="item-date">2020</span>
+        </div>
+        <div class="item-company">City Art, Kuala Lumpur, Malaysia</div>
+        <ul class="item-bullets">
+          <li>Created brand identities and logos for start-up clients, aligning visual style with each target audience.</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <div class="item-header">
+          <span class="item-title">Content Writer</span>
+          <span class="item-date">2018</span>
+        </div>
+        <div class="item-company">Al Jazeera Network, Doha, Qatar</div>
+        <ul class="item-bullets">
+          <li>Researched broadcasts, selected newsworthy segments, edited them and wrote commentary for social media publication.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Selected Projects -->
+    <section class="cv-section">
+      <h2 class="section-title">Selected Projects</h2>
+      <ul class="item-bullets">
+        <li>Freelance data-driven video content (map animations, charts, voiceover) for a Saudi real estate data platform.</li>
+        <li>Built AI-assisted content pipelines that turn news feeds into ready-to-publish newsletters and social carousels.</li>
+      </ul>
+    </section>
+
+    <!-- Education -->
+    <section class="cv-section">
+      <h2 class="section-title">Education</h2>
+      <div class="education-item">
+        <div>
+          <div class="education-degree">Bachelor of Mass Communication</div>
+          <div class="education-school">University of Malaya, Malaysia</div>
+        </div>
+        <div class="item-date">2016 – 2020</div>
+      </div>
+      <div class="education-item" style="margin-top: 3px;">
+        <div>
+          <div class="education-degree">Media Management (workshop)</div>
+          <div class="education-school">Al Jazeera Media Institute</div>
+        </div>
+        <div class="item-date">2018</div>
+      </div>
+    </section>
+
+    <!-- Languages -->
+    <section class="cv-section">
+      <h2 class="section-title">Languages</h2>
+      <p class="inline-data">English – professional <span class="contact-sep">|</span> Dutch – fluent <span class="contact-sep">|</span> Arabic – native</p>
+    </section>
+
+    <!-- Digital Tools -->
+    <section class="cv-section">
+      <h2 class="section-title">Digital Tools</h2>
+      <p class="inline-data">Adobe Premiere Pro, After Effects, Photoshop, Illustrator, Meta Ads, AI tools for content automation</p>
+    </section>
+
+    <!-- References -->
+    <section class="cv-section" style="margin-bottom: 0;">
+      <h2 class="section-title">References</h2>
+      <div class="ref-item">
+        <strong>Dr Hani Al-Tamimi</strong> – CEO, Nejoum Aljazeera – +974 5171 5181 – <a href="mailto:altamimi.hani@gmail.com" style="color: inherit; text-decoration: none;">altamimi.hani@gmail.com</a>
+      </div>
+      <div class="ref-item">
+        <strong>Dr Helena Varkkey</strong> – University of Malaya – +60 12-316 2146 – <a href="mailto:helenav@um.edu.my" style="color: inherit; text-decoration: none;">helenav@um.edu.my</a>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
