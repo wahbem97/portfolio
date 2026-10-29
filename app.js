@@ -554,43 +554,48 @@ function initDispatchForm() {
     // Trigger mail client
     window.location.href = mailtoUrl;
 
+    const checkIcon = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 4px;" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>`;
+    const extIcon = `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 3px;" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>`;
+    const mailIcon = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 3px;" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>`;
+    const clipIcon = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 3px;" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>`;
+
     setTimeout(() => {
       const successHtml = isDutch
         ? `
           <div style="font-weight: 700; margin-bottom: 6px; font-size: 14px;">
-            ✓ Aanvraag gekoppeld aan ${targetEmail}
+            ${checkIcon} Aanvraag gekoppeld aan ${targetEmail}
           </div>
           <div style="font-size: 13px; line-height: 1.5; margin-bottom: 12px;">
             Bedankt <strong>${escapeHtml(name)}</strong>! Uw e-mailprogramma opent automatisch. U kunt de aanvraag ook direct versturen via Gmail of de tekst kopiëren:
           </div>
           <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px;">
-            <a href="${gmailUrl}" target="_blank" rel="noopener noreferrer" style="background: #ea4335; color: #fff; padding: 7px 14px; border-radius: 4px; font-size: 12px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">
-              <span>Open in Gmail ↗</span>
+            <a href="${gmailUrl}" target="_blank" rel="noopener noreferrer" style="background: #ea4335; color: #fff; padding: 7px 14px; border-radius: 4px; font-size: 12px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 4px;">
+              <span>Open in Gmail</span>${extIcon}
             </a>
-            <a href="${mailtoUrl}" style="background: var(--dp-color-accent); color: #fff; padding: 7px 14px; border-radius: 4px; font-size: 12px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">
-              <span>Open E-mailapp ✉</span>
+            <a href="${mailtoUrl}" style="background: var(--dp-color-accent); color: #fff; padding: 7px 14px; border-radius: 4px; font-size: 12px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 4px;">
+              <span>Open E-mailapp</span>${mailIcon}
             </a>
-            <button type="button" id="btn-copy-msg" style="background: var(--dp-color-panel); color: var(--dp-color-ink); border: 1px solid var(--dp-color-rule); padding: 7px 14px; border-radius: 4px; font-size: 12px; cursor: pointer; font-weight: 600;">
-              Kopieer Bericht 📋
+            <button type="button" id="btn-copy-msg" style="background: var(--dp-color-panel); color: var(--dp-color-ink); border: 1px solid var(--dp-color-rule); padding: 7px 14px; border-radius: 4px; font-size: 12px; cursor: pointer; font-weight: 600; display: inline-flex; align-items: center; gap: 4px;">
+              <span>Kopieer Bericht</span>${clipIcon}
             </button>
           </div>
         `
         : `
           <div style="font-weight: 700; margin-bottom: 6px; font-size: 14px;">
-            ✓ Dispatch linked to ${targetEmail}
+            ${checkIcon} Dispatch linked to ${targetEmail}
           </div>
           <div style="font-size: 13px; line-height: 1.5; margin-bottom: 12px;">
             Thank you <strong>${escapeHtml(name)}</strong>! Your default email client should open automatically. You can also send directly via Gmail or copy the formatted brief:
           </div>
           <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px;">
-            <a href="${gmailUrl}" target="_blank" rel="noopener noreferrer" style="background: #ea4335; color: #fff; padding: 7px 14px; border-radius: 4px; font-size: 12px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">
-              <span>Open in Gmail ↗</span>
+            <a href="${gmailUrl}" target="_blank" rel="noopener noreferrer" style="background: #ea4335; color: #fff; padding: 7px 14px; border-radius: 4px; font-size: 12px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 4px;">
+              <span>Open in Gmail</span>${extIcon}
             </a>
-            <a href="${mailtoUrl}" style="background: var(--dp-color-accent); color: #fff; padding: 7px 14px; border-radius: 4px; font-size: 12px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">
-              <span>Open Mail App ✉</span>
+            <a href="${mailtoUrl}" style="background: var(--dp-color-accent); color: #fff; padding: 7px 14px; border-radius: 4px; font-size: 12px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 4px;">
+              <span>Open Mail App</span>${mailIcon}
             </a>
-            <button type="button" id="btn-copy-msg" style="background: var(--dp-color-panel); color: var(--dp-color-ink); border: 1px solid var(--dp-color-rule); padding: 7px 14px; border-radius: 4px; font-size: 12px; cursor: pointer; font-weight: 600;">
-              Copy Formatted Brief 📋
+            <button type="button" id="btn-copy-msg" style="background: var(--dp-color-panel); color: var(--dp-color-ink); border: 1px solid var(--dp-color-rule); padding: 7px 14px; border-radius: 4px; font-size: 12px; cursor: pointer; font-weight: 600; display: inline-flex; align-items: center; gap: 4px;">
+              <span>Copy Formatted Brief</span>${clipIcon}
             </button>
           </div>
         `;
@@ -610,9 +615,9 @@ function initDispatchForm() {
       if (copyMsgBtn) {
         copyMsgBtn.addEventListener('click', () => {
           navigator.clipboard.writeText(bodyText).then(() => {
-            copyMsgBtn.textContent = isDutch ? 'Gekopieerd! ✓' : 'Copied! ✓';
+            copyMsgBtn.innerHTML = `<span>${isDutch ? 'Gekopieerd!' : 'Copied!'}</span>${checkIcon}`;
             setTimeout(() => {
-              copyMsgBtn.textContent = isDutch ? 'Kopieer Bericht 📋' : 'Copy Formatted Brief 📋';
+              copyMsgBtn.innerHTML = `<span>${isDutch ? 'Kopieer Bericht' : 'Copy Formatted Brief'}</span>${clipIcon}`;
             }, 2000);
           });
         });

@@ -713,8 +713,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 }
 
 .lang-flag {
-  font-size: 20px;
+  display: flex;
+  align-items: center;
   margin-bottom: 6px;
+}
+
+.lang-flag svg {
+  display: block;
 }
 
 .lang-info {
@@ -958,6 +963,19 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   object-fit: cover;
   border: 2px solid var(--dp-color-accent);
   box-shadow: 0 0 12px rgba(7, 76, 224, 0.3);
+}
+
+.author-avatar.author-monogram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--dp-color-accent), #032b82);
+  color: #ffffff;
+  font-family: var(--dp-font-display);
+  font-weight: 800;
+  font-size: 19px;
+  letter-spacing: -0.02em;
+  user-select: none;
 }
 
 .author-meta {
@@ -1847,8 +1865,21 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 }
 
 .k-icon {
-  font-size: 28px;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: var(--dp-color-accent-subtle);
+  color: var(--dp-color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 16px;
+}
+
+.k-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: var(--dp-color-accent);
 }
 
 .k-title {

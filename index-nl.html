@@ -50,11 +50,23 @@
         <!-- Themaschakelaar in Hoofdnavigatie -->
         <div class="theme-segmented-switch" role="group" aria-label="Themaschakelaar">
           <button type="button" class="theme-segment-btn" data-theme-val="dark" aria-label="Activeer Donker leisteen thema" title="Donker Thema">
-            <span class="theme-icon">&#9790;</span>
+            <svg class="theme-icon-svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
             <span class="theme-label">Dark</span>
           </button>
           <button type="button" class="theme-segment-btn" data-theme-val="light" aria-label="Activeer Licht krantenthema" title="Licht Thema">
-            <span class="theme-icon">&#9788;</span>
+            <svg class="theme-icon-svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
             <span class="theme-label">Light</span>
           </button>
         </div>
@@ -94,7 +106,13 @@
               <div class="badge-title">REDACTIONELE TALENKENNIS &amp; INZETBAARHEID:</div>
               <div class="badges-row">
                 <div class="lang-badge highlight-dutch" data-lang="nl">
-                  <div class="lang-flag">&#127475;&#127473;</div>
+                  <div class="lang-flag" aria-hidden="true">
+                    <svg width="24" height="16" viewBox="0 0 640 480" style="border-radius: 2px; box-shadow: 0 1px 3px rgba(0,0,0,0.3);">
+                      <path fill="#21468B" d="M0 0h640v480H0z"/>
+                      <path fill="#FFF" d="M0 0h640v320H0z"/>
+                      <path fill="#AE1C28" d="M0 0h640v160H0z"/>
+                    </svg>
+                  </div>
                   <div class="lang-info">
                     <span class="lang-name">Nederlands (Dutch)</span>
                     <span class="lang-level">Zeer Vloeiend &bull; Moedertaalniveau</span>
@@ -103,7 +121,19 @@
                 </div>
 
                 <div class="lang-badge" data-lang="en">
-                  <div class="lang-flag">&#127468;&#127463;</div>
+                  <div class="lang-flag" aria-hidden="true">
+                    <svg width="24" height="16" viewBox="0 0 60 30" style="border-radius: 2px; box-shadow: 0 1px 3px rgba(0,0,0,0.3);">
+                      <clipPath id="uk-flag-clip-nl"><path d="M0,0 v30 h60 v-30 z"/></clipPath>
+                      <clipPath id="uk-diag-clip-nl"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath>
+                      <g clip-path="url(#uk-flag-clip-nl)">
+                        <path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
+                        <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
+                        <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#uk-diag-clip-nl)" stroke="#C8102E" stroke-width="4"/>
+                        <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
+                        <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/>
+                      </g>
+                    </svg>
+                  </div>
                   <div class="lang-info">
                     <span class="lang-name">Engels (English)</span>
                     <span class="lang-level">Vloeiend &bull; Mondiale Redactie</span>
@@ -112,7 +142,12 @@
                 </div>
 
                 <div class="lang-badge" data-lang="ar">
-                  <div class="lang-flag">&#127480;&#127462;</div>
+                  <div class="lang-flag" aria-hidden="true">
+                    <svg width="24" height="16" viewBox="0 0 24 16" style="border-radius: 2px; box-shadow: 0 1px 3px rgba(0,0,0,0.3);">
+                      <rect width="24" height="16" fill="#006c35"/>
+                      <path d="M5 8h14M13 4l4 4-4 4" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    </svg>
+                  </div>
                   <div class="lang-info">
                     <span class="lang-name">Arabisch (العربية)</span>
                     <span class="lang-level">Moedertaal &bull; Redactie &amp; Scripts</span>
@@ -218,8 +253,7 @@
 
               <!-- Redactionele Auteurskaart -->
               <div class="hero-author-strip">
-                <img src="assets/mustafa_portrait.jpg" alt="Mustafa — Visueel Journalist &amp; Digital Content Producer"
-                  class="author-avatar" width="56" height="56" loading="eager">
+                <div class="author-avatar author-monogram" aria-label="Mustafa Wehbi">MW</div>
                 <div class="author-meta">
                   <span class="author-name">Mustafa</span>
                   <span class="author-cred">Al Jazeera Redactie-Alumnus &bull; Leader Group Lead</span>
@@ -325,7 +359,7 @@
                     <path
                       d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743 2.895 2.895 0 0 1 3.125-4.631V9.288a6.34 6.34 0 0 0-4.708 6.136 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.584a8.214 8.214 0 0 0 4.319 1.547V6.686z" />
                   </svg>
-                  <span>Bekijk op TikTok ↗</span>
+                  <span>Bekijk op TikTok</span><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 3px;" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
                 </a>
                 <button class="btn-dossier-pill btn-open-dossier" data-project="ghent-mobility">
                   <span>Dossier</span>
@@ -392,7 +426,7 @@
                     <path
                       d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743 2.895 2.895 0 0 1 3.125-4.631V9.288a6.34 6.34 0 0 0-4.708 6.136 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.584a8.214 8.214 0 0 0 4.319 1.547V6.686z" />
                   </svg>
-                  <span>Bekijk op TikTok ↗</span>
+                  <span>Bekijk op TikTok</span><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 3px;" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
                 </a>
                 <button class="btn-dossier-pill btn-open-dossier" data-project="belgian-trains-left">
                   <span>Dossier</span>
@@ -459,7 +493,7 @@
                     <path
                       d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743 2.895 2.895 0 0 1 3.125-4.631V9.288a6.34 6.34 0 0 0-4.708 6.136 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.584a8.214 8.214 0 0 0 4.319 1.547V6.686z" />
                   </svg>
-                  <span>Bekijk op TikTok ↗</span>
+                  <span>Bekijk op TikTok</span><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 3px;" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
                 </a>
                 <button class="btn-dossier-pill btn-open-dossier" data-project="leuven-knowledge">
                   <span>Dossier</span>
@@ -587,7 +621,7 @@
                   <path
                     d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
                 </svg>
-                <span>Bekijk op YouTube ↗</span>
+                <span>Bekijk op YouTube</span><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 3px;" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
               </a>
 
               <button class="btn-secondary btn-open-dossier" data-project="huawei-chip">
@@ -679,7 +713,7 @@
                       <path
                         d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743 2.895 2.895 0 0 1 3.125-4.631V9.288a6.34 6.34 0 0 0-4.708 6.136 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.584a8.214 8.214 0 0 0 4.319 1.547V6.686z" />
                     </svg>
-                    <span>Bekijk op TikTok ↗</span>
+                    <span>Bekijk op TikTok</span><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 3px;" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
                   </a>
                   <button class="btn-dossier-pill btn-open-dossier" data-project="north-riyadh">
                     <span>Dossier</span>
@@ -746,7 +780,7 @@
                       <path
                         d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743 2.895 2.895 0 0 1 3.125-4.631V9.288a6.34 6.34 0 0 0-4.708 6.136 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.584a8.214 8.214 0 0 0 4.319 1.547V6.686z" />
                     </svg>
-                    <span>Bekijk op TikTok ↗</span>
+                    <span>Bekijk op TikTok</span><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 3px;" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
                   </a>
                   <button class="btn-dossier-pill btn-open-dossier" data-project="tallest-building">
                     <span>Dossier</span>
@@ -813,7 +847,7 @@
                       <path
                         d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743 2.895 2.895 0 0 1 3.125-4.631V9.288a6.34 6.34 0 0 0-4.708 6.136 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.584a8.214 8.214 0 0 0 4.319 1.547V6.686z" />
                     </svg>
-                    <span>Bekijk op TikTok ↗</span>
+                    <span>Bekijk op TikTok</span><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 3px;" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
                   </a>
                   <button class="btn-dossier-pill btn-open-dossier" data-project="jeddah-sez">
                     <span>Dossier</span>
@@ -1005,7 +1039,12 @@
         <!-- Analytische Kenniszuilen -->
         <div class="knowledge-pillars-grid">
           <div class="knowledge-card">
-            <div class="k-icon">&#128200;</div>
+            <div class="k-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                <polyline points="17 6 23 6 23 12"></polyline>
+              </svg>
+            </div>
             <h3 class="k-title">Macro-economie &amp; Monetair Beleid</h3>
             <p class="k-desc">
               Grondig begrip van transmissiemechanismen voor rentetarieven, kwantitatieve verruiming/verkrapping, inflatie-indexen (CPI, PCE) en forward guidance van centrale banken bij de ECB, Amerikaanse Federal Reserve en regionale monetaire autoriteiten.
@@ -1013,7 +1052,13 @@
           </div>
 
           <div class="knowledge-card">
-            <div class="k-icon">&#127757;</div>
+            <div class="k-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+            </div>
             <h3 class="k-title">Internationale Handel &amp; Tariefkaders</h3>
             <p class="k-desc">
               Expertise in bilaterale handelsverdragen, WTO-mechanismen, multimodale logistieke hubs, regels van oorsprong en de geopolitieke implicaties van energie- en grondstoffenafhankelijkheden tussen Europa, Azië en het Midden-Oosten.
@@ -1021,7 +1066,12 @@
           </div>
 
           <div class="knowledge-card">
-            <div class="k-icon">&#128218;</div>
+            <div class="k-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+            </div>
             <h3 class="k-title">Financiële Geletterdheid &amp; Marktdynamiek</h3>
             <p class="k-desc">
               Lezen van bedrijfsbalansen, schuldlooptijdstructuren, spot- en termijncurves voor grondstoffen en vastgoedrendementsstatistieken om met authentiek financieel gezag over de marktrealiteit te berichten.
